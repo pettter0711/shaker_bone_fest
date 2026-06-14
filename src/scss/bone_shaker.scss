@@ -1,0 +1,105 @@
+@import "variables";
+
+html,
+body {
+    background-color: $bg-color;
+    color: $primary-color;
+}
+
+.header {
+    padding: 20px 0;
+    width: 100%;
+
+    &.scrolled {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        background-color: $bg-color;
+        animation: fadeInDown 0.8s;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            max-width: 180px;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            > li:hover {
+                color: $accent-color;
+                transition: $transit;
+            }
+        }
+
+        .user-ctrl {
+            li.ticket {
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    padding: 5px 16px;
+                    border-radius: map-get($radius, sm);
+                    background-color: $accent-color;
+                }
+
+                &:hover a {
+                    color: $primary-color;
+                    animation: heartBeat 1.2s;
+                    transition: $transit;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    .banner {
+        height: 85vh;
+        background-image: url("../images/banner.jpg");
+        background-position: center center;
+        background-size: cover;
+
+        .banner-wrap {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 20px;
+            padding-bottom: 170px;
+            height: 100%;
+            animation: zoomIn 1.2s;
+            animation-delay: 0.5s;
+
+            .title {
+                font-size: 1rem;
+                letter-spacing: 0.05rem;
+            }
+            .logo {
+                width: 420px;
+                margin-bottom: 12px;
+            }
+            .desc {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    }
+
+    .test {
+        height: 75vh;
+    }
+}

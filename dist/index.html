@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>骷搖音樂祭</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/css/bone_shaker.css" />
+    </head>
+    <body>
+        <div id="head-app">
+            <header class="header font-zh" :class="{ scrolled: isScrolled }">
+                <div class="container">
+                    <div class="header-wrap">
+                        <div class="logo">
+                            <a href="#">
+                                <img
+                                    src="./assets/images/logo_horizon.png"
+                                    alt="骷搖音樂祭"
+                                />
+                            </a>
+                        </div>
+                        <ul class="menu">
+                            <li class="item" v-for="item in menus">
+                                <a href="#">{{ item.zh }}</a>
+                            </li>
+                        </ul>
+                        <ul class="user-ctrl">
+                            <li class="ticket">
+                                <a href="#">立即購票</a>
+                            </li>
+                            <li class="cart">
+                                <a href="#">
+                                    <span class="material-symbols-outlined"
+                                        >shopping_cart</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="user">
+                                <a href="#">
+                                    <span class="material-symbols-outlined"
+                                        >account_circle</span
+                                    >
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="main-app">
+            <div class="main font-zh">
+                <div class="banner">
+                    <div class="container">
+                        <div class="banner-wrap">
+                            <h5 class="title">墨西哥亡靈節X台式電子花車</h5>
+                            <div class="logo">
+                                <img
+                                    src="./assets/images/logo_horizon.png"
+                                    alt="骷搖音樂祭"
+                                />
+                            </div>
+                            <div class="desc thin">
+                                <span>
+                                    <p>
+                                        我們相信，死亡不是終點，而是另一種存在的節奏。
+                                    </p>
+                                    <p>
+                                        我們以音樂為橋、以光影為語，打造一場跨越生死、融合文化的狂歡儀式。
+                                    </p>
+                                </span>
+                                <span>
+                                    <p>
+                                        這不只是紀念，更是重生；不只是哀悼，更是慶祝。
+                                    </p>
+                                    <p>
+                                        每一段思念，每一位亡者，都值得再
+                                        一次登場。
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test"></div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+</html>

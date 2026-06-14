@@ -1,0 +1,38 @@
+@import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+$bold: 700;
+$default: 400;
+$thin: 100;
+
+$bg-color: #1a1a1a;
+$primary-color: #fff;
+$accent-color: #ff6d00;
+$red: #ff0000;
+$purple: #7b46f7;
+$green: #bcf521;
+
+$transit: all 0.3s ease-in-out;
+$radius: (
+    sm: 4px,
+    md: 8px,
+    lg: 12px,
+    pill: 9999px,
+    circle: 50%,
+);
+
+.font-zh {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $default;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.bold {
+    font-weight: $bold;
+}
+
+.thin {
+    font-weight: $thin;
+}

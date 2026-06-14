@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+bosy {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1000px;
+  height: 100%;
+}
+
+.font-zh {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+html,
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.header {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.header.scrolled {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #1a1a1a;
+  -webkit-animation: fadeInDown 0.8s;
+          animation: fadeInDown 0.8s;
+}
+
+.header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-wrap .logo {
+  max-width: 180px;
+}
+
+.header-wrap ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+
+.header-wrap ul > li:hover {
+  color: #ff6d00;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-wrap .user-ctrl li.ticket a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+  padding: 5px 16px;
+  border-radius: 4px;
+  background-color: #ff6d00;
+}
+
+.header-wrap .user-ctrl li.ticket:hover a {
+  color: #fff;
+  -webkit-animation: heartBeat 1.2s;
+          animation: heartBeat 1.2s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .banner {
+  height: 85vh;
+  background-image: url("../images/banner.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.main .banner .banner-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  padding-bottom: 170px;
+  height: 100%;
+  -webkit-animation: zoomIn 1.2s;
+          animation: zoomIn 1.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.main .banner .banner-wrap .title {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+.main .banner .banner-wrap .logo {
+  width: 420px;
+  margin-bottom: 12px;
+}
+
+.main .banner .banner-wrap .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 15px;
+}
+
+.main .test {
+  height: 75vh;
+}
+/*# sourceMappingURL=bone_shaker.css.map */
