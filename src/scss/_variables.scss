@@ -36,3 +36,31 @@ $radius: (
 .thin {
     font-weight: $thin;
 }
+
+button.cta {
+    all: unset;
+    padding: 5px 16px;
+    border-radius: map-get($radius, sm);
+    background-color: $accent-color;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary-color;
+        animation: heartBeat 1.2s;
+        transition: $transit;
+    }
+}
+
+.block-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: $bold;
+        letter-spacing: 0.1rem;
+    }
+}

@@ -52,6 +52,42 @@ img {
   font-weight: 100;
 }
 
+button.cta {
+  all: unset;
+  padding: 5px 16px;
+  border-radius: 4px;
+  background-color: #ff6d00;
+  cursor: pointer;
+}
+
+button.cta:hover {
+  color: #fff;
+  -webkit-animation: heartBeat 1.2s;
+          animation: heartBeat 1.2s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.block-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.block-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
 html,
 body {
   background-color: #1a1a1a;
@@ -59,16 +95,19 @@ body {
 }
 
 .header {
-  padding: 20px 0;
-  width: 100%;
-}
-
-.header.scrolled {
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
+  padding: 20px 0;
   width: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-animation: slideInDown 1s;
+          animation: slideInDown 1s;
+}
+
+.header.scrolled {
   background-color: #1a1a1a;
   -webkit-animation: fadeInDown 0.8s;
           animation: fadeInDown 0.8s;
@@ -87,7 +126,7 @@ body {
 }
 
 .header-wrap .logo {
-  max-width: 180px;
+  max-width: 160px;
 }
 
 .header-wrap ul {
@@ -103,41 +142,38 @@ body {
   gap: 12px;
 }
 
-.header-wrap ul > li:hover {
+.header-wrap ul > li a:hover {
   color: #ff6d00;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.header-wrap .user-ctrl li.ticket a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 4px;
-  padding: 5px 16px;
-  border-radius: 4px;
-  background-color: #ff6d00;
-}
-
-.header-wrap .user-ctrl li.ticket:hover a {
-  color: #fff;
-  -webkit-animation: heartBeat 1.2s;
-          animation: heartBeat 1.2s;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.main > div {
+  margin-bottom: 20px;
 }
 
 .main .banner {
-  height: 85vh;
-  background-image: url("../images/banner.jpg");
+  margin-bottom: 0;
+  height: 100vh;
+  background-image: url("../images/banner_bg.jpg");
   background-position: center center;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .banner .banner-bone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  -webkit-animation: slideInRight 1s;
+          animation: slideInRight 1s;
+}
+
+.main .banner .banner-bone img {
+  max-width: unset;
+  height: 100%;
 }
 
 .main .banner .banner-wrap {
@@ -155,13 +191,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  padding: 0 20px;
+  padding-left: 150px;
   padding-bottom: 170px;
   height: 100%;
-  -webkit-animation: zoomIn 1.2s;
-          animation: zoomIn 1.2s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation: slideInLeft 1s;
+          animation: slideInLeft 1s;
 }
 
 .main .banner .banner-wrap .title {
@@ -188,7 +222,243 @@ body {
   gap: 15px;
 }
 
-.main .test {
-  height: 75vh;
+.main .countdown {
+  padding: 30px 0;
+  background-color: #1a1a1a;
+  background-image: url("../images/countdown_bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.main .countdown .block-title ~ div {
+  margin-bottom: 20px;
+}
+
+.main .countdown-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.main .countdown-wrap > div {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 30px;
+  min-width: 220px;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.main .countdown-wrap > div::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 107%;
+  height: 102%;
+  border-radius: inherit;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff6d00), color-stop(45%, transparent), color-stop(65%, transparent), to(#ff6d00));
+  background-image: linear-gradient(to bottom right, #ff6d00 0%, transparent 45%, transparent 65%, #ff6d00);
+  z-index: 0;
+}
+
+.main .countdown-wrap > div .value {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.main .countdown-wrap > div .time-label {
+  font-size: 1.5rem;
+}
+
+.main .countdown-info {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.main .countdown-info > span:first-child {
+  color: #ff6d00;
+}
+
+.main .countdown-ticket {
+  text-align: center;
+}
+
+.main .about-origin {
+  margin-bottom: 20px;
+  height: 300px;
+  background-color: #7b46f7;
+}
+
+.main .about-wrap {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: minmax(480px, auto);
+      grid-template-rows: minmax(480px, auto);
+}
+
+.main .about-wrap .about-group > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  background-color: #000;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .about-wrap .about-group > a.red {
+  -webkit-box-shadow: 0 0 20px 8px inset rgba(255, 0, 0, 0.5);
+          box-shadow: 0 0 20px 8px inset rgba(255, 0, 0, 0.5);
+}
+
+.main .about-wrap .about-group > a.orange {
+  -webkit-box-shadow: 0 0 20px 8px inset rgba(255, 109, 0, 0.5);
+          box-shadow: 0 0 20px 8px inset rgba(255, 109, 0, 0.5);
+}
+
+.main .about-wrap .about-group > a.purple {
+  -webkit-box-shadow: 0 0 20px 8px inset rgba(123, 70, 247, 0.5);
+          box-shadow: 0 0 20px 8px inset rgba(123, 70, 247, 0.5);
+}
+
+.main .about-wrap .about-group > a.green {
+  -webkit-box-shadow: 0 0 20px 8px inset rgba(188, 245, 33, 0.5);
+          box-shadow: 0 0 20px 8px inset rgba(188, 245, 33, 0.5);
+}
+
+.main .about-wrap .about-group > a .about-pic {
+  width: 120px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .about-wrap .about-group > a .about-title {
+  position: relative;
+  height: 180px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .about-wrap .about-group > a .about-title img {
+  max-width: unset;
+  height: 100%;
+}
+
+.main .about-wrap .about-group > a .about-title img.sub-img {
+  position: absolute;
+  left: -30px;
+  top: -70px;
+  height: 130%;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .about-wrap .about-group > a:hover .about-pic {
+  -webkit-transform: scale(1.8) translate(50px, 10px);
+          transform: scale(1.8) translate(50px, 10px);
+}
+
+.main .about-wrap .about-group > a:hover .about-title {
+  -webkit-transform: scale(1.3) translate(-30px, -30px);
+          transform: scale(1.3) translate(-30px, -30px);
+}
+
+.main .about-wrap .about-group > a:hover .about-title img.sub-img {
+  opacity: 1;
+}
+
+.main .about-wrap .about-group > a:hover.red {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(red), color-stop(30%, rgba(255, 0, 0, 0)));
+  background-image: linear-gradient(0deg, red 0%, rgba(255, 0, 0, 0) 30%);
+}
+
+.main .about-wrap .about-group > a:hover.orange {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ff6d00), color-stop(30%, rgba(255, 109, 0, 0)));
+  background-image: linear-gradient(0deg, #ff6d00 0%, rgba(255, 109, 0, 0) 30%);
+}
+
+.main .about-wrap .about-group > a:hover.purple {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#7b46f7), color-stop(30%, rgba(123, 70, 247, 0)));
+  background-image: linear-gradient(0deg, #7b46f7 0%, rgba(123, 70, 247, 0) 30%);
+}
+
+.main .about-wrap .about-group > a:hover.green {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#bcf521), color-stop(30%, rgba(188, 245, 33, 0)));
+  background-image: linear-gradient(0deg, #bcf521 0%, rgba(188, 245, 33, 0) 30%);
+}
+
+.main .about-wrap .about-group > a .about-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  margin-bottom: 70px;
+  font-size: 1.2rem;
+}
+
+.main .about-wrap .about-group > a .about-intro .intro-title {
+  font-size: 1.8rem;
+  color: #ff6d00;
+}
+
+.main .about-wrap .about-group > a .about-intro .read-more {
+  all: unset;
+  width: 100%;
+  margin-top: 15px;
+  padding: 8px 0;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .about-wrap .about-group > a .about-intro .read-more:hover {
+  border-color: #ff6d00;
+  background-color: #ff6d00;
 }
 /*# sourceMappingURL=bone_shaker.css.map */

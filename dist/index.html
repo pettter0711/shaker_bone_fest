@@ -34,7 +34,7 @@
                         </ul>
                         <ul class="user-ctrl">
                             <li class="ticket">
-                                <a href="#">立即購票</a>
+                                <button class="cta">立即購票</button>
                             </li>
                             <li class="cart">
                                 <a href="#">
@@ -58,38 +58,112 @@
         <div id="main-app">
             <div class="main font-zh">
                 <div class="banner">
+                    <div class="banner-bone">
+                        <img src="./assets/images/banner_bone.png" alt="bone" />
+                    </div>
+                    <div class="banner-wrap">
+                        <h5 class="title">墨西哥亡靈節X台式電子花車</h5>
+                        <div class="logo">
+                            <img
+                                src="./assets/images/logo_horizon.png"
+                                alt="骷搖音樂祭"
+                            />
+                        </div>
+                        <div class="desc thin">
+                            <span>
+                                <p>
+                                    我們相信，死亡不是終點，而是另一種存在的節奏。
+                                </p>
+                                <p>
+                                    我們以音樂為橋、以光影為語，打造一場跨越生死、融合文化的狂歡儀式。
+                                </p>
+                            </span>
+                            <span>
+                                <p>
+                                    這不只是紀念，更是重生；不只是哀悼，更是慶祝。
+                                </p>
+                                <p>
+                                    每一段思念，每一位亡者，都值得再 一次登場。
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown">
                     <div class="container">
-                        <div class="banner-wrap">
-                            <h5 class="title">墨西哥亡靈節X台式電子花車</h5>
-                            <div class="logo">
-                                <img
-                                    src="./assets/images/logo_horizon.png"
-                                    alt="骷搖音樂祭"
-                                />
+                        <div class="block-title">
+                            <span class="title-border"
+                                ><img src="" alt=""
+                            /></span>
+                            <h2>演出倒數</h2>
+                        </div>
+                        <div class="countdown-wrap">
+                            <div class="days">
+                                <span class="value">{{ counts.days }}</span>
+                                <span class="time-label">天</span>
                             </div>
-                            <div class="desc thin">
-                                <span>
-                                    <p>
-                                        我們相信，死亡不是終點，而是另一種存在的節奏。
-                                    </p>
-                                    <p>
-                                        我們以音樂為橋、以光影為語，打造一場跨越生死、融合文化的狂歡儀式。
-                                    </p>
-                                </span>
-                                <span>
-                                    <p>
-                                        這不只是紀念，更是重生；不只是哀悼，更是慶祝。
-                                    </p>
-                                    <p>
-                                        每一段思念，每一位亡者，都值得再
-                                        一次登場。
-                                    </p>
-                                </span>
+                            <div class="hours">
+                                <span class="value">{{ counts.hours }}</span>
+                                <span class="time-label">時</span>
+                            </div>
+                            <div class="minutes">
+                                <span class="value">{{ counts.minutes }}</span>
+                                <span class="time-label">分</span>
+                            </div>
+                            <div class="seconds">
+                                <span class="value">{{ counts.seconds }}</span>
+                                <span class="time-label">秒</span>
+                            </div>
+                        </div>
+                        <div class="countdown-info">
+                            <span>2026/10/31 晚上六點開演</span>
+                            <span> | </span>
+                            <a
+                                class="countdown-info-location"
+                                href="https://maps.app.goo.gl/eNuH6uZQ2DqoiMGf9"
+                                target="_blank"
+                                >台中市民廣場</a
+                            >
+                        </div>
+                        <div class="countdown-ticket">
+                            <button class="cta">立即購票</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="about">
+                    <div class="container">
+                        <div class="block-title">
+                            <span class="title-border"
+                                ><img src="" alt=""
+                            /></span>
+                            <h2>認識骷搖|骷搖起源</h2>
+                        </div>
+                        <div class="about-origin"></div>
+                        <div class="about-wrap">
+                            <div class="about-group" v-for="item in abouts">
+                                <a href="#" :class="item.color" v-key="item.id">
+                                    <div class="about-pic">
+                                        <img
+                                            :src="`./assets/images/main_skull_${item.id}.png`"
+                                            :alt="`skull-${item.color}`"
+                                        />
+                                    </div>
+                                    <div class="about-title">
+                                        <img
+                                            :src="`./assets/images/main_title_ver_${item.id}.png`"
+                                            :alt="`skull-${item.color}`"
+                                        />
+                                        <img
+                                            class="sub-img"
+                                            :src="`./assets/images/sub_title_ver_${item.id}.png`"
+                                            :alt="`skull-${item.color}`"
+                                        />
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="test"></div>
             </div>
         </div>
     </body>
