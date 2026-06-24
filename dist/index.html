@@ -99,20 +99,34 @@
                         </div>
                         <div class="countdown-wrap">
                             <div class="days">
-                                <span class="value">{{ counts.days }}</span>
-                                <span class="time-label">天</span>
+                                <div class="content-wrap">
+                                    <span class="value">{{ counts.days }}</span>
+                                    <span class="time-label">天</span>
+                                </div>
                             </div>
                             <div class="hours">
-                                <span class="value">{{ counts.hours }}</span>
-                                <span class="time-label">時</span>
+                                <div class="content-wrap">
+                                    <span class="value"
+                                        >{{ counts.hours }}</span
+                                    >
+                                    <span class="time-label">時</span>
+                                </div>
                             </div>
                             <div class="minutes">
-                                <span class="value">{{ counts.minutes }}</span>
-                                <span class="time-label">分</span>
+                                <div class="content-wrap">
+                                    <span class="value"
+                                        >{{ counts.minutes }}</span
+                                    >
+                                    <span class="time-label">分</span>
+                                </div>
                             </div>
                             <div class="seconds">
-                                <span class="value">{{ counts.seconds }}</span>
-                                <span class="time-label">秒</span>
+                                <div class="content-wrap">
+                                    <span class="value"
+                                        >{{ counts.seconds }}</span
+                                    >
+                                    <span class="time-label">秒</span>
+                                </div>
                             </div>
                         </div>
                         <div class="countdown-info">
@@ -138,7 +152,24 @@
                             /></span>
                             <h2>認識骷搖|骷搖起源</h2>
                         </div>
-                        <div class="about-origin"></div>
+                        <div class="about-origin">
+                            <div class="about-origin-pic">
+                                <!-- <img
+                                    src="./assets/images/color_article_01.png"
+                                    alt="bone"
+                                /> -->
+                            </div>
+                            <div class="about-origin-intro">
+                                <div class="bold">骷搖傳說</div>
+                                <div class="thin">
+                                    <p>骷搖音樂祭，是我們與愛的連結</p>
+                                    <p>
+                                        願你們記得，不論生死，愛與記憶都能穿越時空
+                                    </p>
+                                </div>
+                                <button class="read-more">更多內容</button>
+                            </div>
+                        </div>
                         <div class="about-wrap">
                             <div class="about-group" v-for="item in abouts">
                                 <a href="#" :class="item.color" v-key="item.id">

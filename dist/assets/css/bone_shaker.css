@@ -250,37 +250,29 @@ body {
 .main .countdown-wrap > div {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 30px;
+  padding: 2px;
   min-width: 220px;
   border-radius: 8px;
-  background-color: #1a1a1a;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.main .countdown-wrap > div::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 107%;
-  height: 102%;
-  border-radius: inherit;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff6d00), color-stop(45%, transparent), color-stop(65%, transparent), to(#ff6d00));
   background-image: linear-gradient(to bottom right, #ff6d00 0%, transparent 45%, transparent 65%, #ff6d00);
-  z-index: 0;
 }
 
-.main .countdown-wrap > div .value {
+.main .countdown-wrap > div .content-wrap {
+  padding: 26px;
+  background-color: #1a1a1a;
+  border-radius: inherit;
+  text-align: center;
+  -webkit-box-shadow: 0 0 15px 0 rgba(255, 109, 0, 0.8);
+          box-shadow: 0 0 15px 0 rgba(255, 109, 0, 0.8);
+}
+
+.main .countdown-wrap > div .content-wrap .value {
   font-size: 4.5rem;
   font-weight: 700;
   color: #fff;
 }
 
-.main .countdown-wrap > div .time-label {
+.main .countdown-wrap > div .content-wrap .time-label {
   font-size: 1.5rem;
 }
 
@@ -299,9 +291,26 @@ body {
 }
 
 .main .about-origin {
-  margin-bottom: 20px;
-  height: 300px;
+  --mb: 20px;
+  margin-bottom: var(--mb);
+  height: calc(50vh - var(--mb));
   background-color: #7b46f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+}
+
+.main .about-origin-pic {
+  width: 30%;
+  height: 100%;
+  background-color: #fff;
 }
 
 .main .about-wrap {
@@ -310,8 +319,12 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: minmax(480px, auto);
-      grid-template-rows: minmax(480px, auto);
+  -ms-grid-rows: minmax(75vh, auto);
+      grid-template-rows: minmax(75vh, auto);
+}
+
+.main .about-wrap .about-group {
+  height: 100%;
 }
 
 .main .about-wrap .about-group > a {
@@ -329,6 +342,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 40px;
+  height: 100%;
   background-color: #000;
   overflow: hidden;
   cursor: pointer;
