@@ -27,7 +27,7 @@ const countDown = (month, day, hour, min, sec) => {
 
         let units = {
             days: 60 * 60 * 24,
-            hours: 60 * 24,
+            hours: 60 * 60,
             min: 60,
         };
 

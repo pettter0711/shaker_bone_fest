@@ -38,6 +38,7 @@ const mainOptions = {
                 seconds: "0",
             },
             abouts: [],
+            artists: [],
         };
     },
     methods: {
@@ -50,10 +51,11 @@ const mainOptions = {
         },
     },
     async mounted() {
-        // setInterval(() => {
-        //     this.countTime();
-        // }, 1000);
+        setInterval(() => {
+            this.countTime();
+        }, 1000);
         this.abouts = await fetchApi("./assets/database/about_color.json");
+        this.artists = await fetchApi("./assets/database/artists.json");
     },
 };
 

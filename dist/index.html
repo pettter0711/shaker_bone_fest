@@ -59,7 +59,10 @@
             <div class="main font-zh">
                 <div class="banner">
                     <div class="banner-bone">
-                        <img src="./assets/images/banner_bone.png" alt="bone" />
+                        <img
+                            src="./assets/images/bg/banner_bone.png"
+                            alt="bone"
+                        />
                     </div>
                     <div class="banner-wrap">
                         <h5 class="title">墨西哥亡靈節X台式電子花車</h5>
@@ -95,7 +98,7 @@
                             <span class="title-border"
                                 ><img src="" alt=""
                             /></span>
-                            <h2>演出倒數</h2>
+                            <h2>開演倒數</h2>
                         </div>
                         <div class="countdown-wrap">
                             <div class="days">
@@ -153,49 +156,78 @@
                             <h2>認識骷搖|骷搖起源</h2>
                         </div>
                         <div class="about-origin">
-                            <div class="about-origin-pic">
-                                <!-- <img
-                                    src="./assets/images/color_article_01.png"
-                                    alt="bone"
-                                /> -->
-                            </div>
-                            <div class="about-origin-intro">
-                                <div class="bold">骷搖傳說</div>
-                                <div class="thin">
-                                    <p>骷搖音樂祭，是我們與愛的連結</p>
-                                    <p>
-                                        願你們記得，不論生死，愛與記憶都能穿越時空
-                                    </p>
+                            <div class="about-origin-wrap">
+                                <div class="origin-pic">
+                                    <img
+                                        src="./assets/images/color_article/color_article_1.png"
+                                        alt="skull"
+                                    />
                                 </div>
-                                <button class="read-more">更多內容</button>
+                                <div class="origin-intro">
+                                    <div class="bold">骷搖傳說</div>
+                                    <div class="thin">
+                                        <p>骷搖音樂祭，是我們與愛的連結</p>
+                                        <p>
+                                            願你們記得，不論生死，愛與記憶都能穿.越.時.空.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="read-more">瞭解更多</a>
+                                </div>
                             </div>
                         </div>
                         <div class="about-wrap">
                             <div class="about-group" v-for="item in abouts">
-                                <a href="#" :class="item.color" v-key="item.id">
-                                    <div class="about-pic">
-                                        <img
-                                            :src="`./assets/images/main_skull_${item.id}.png`"
-                                            :alt="`skull-${item.color}`"
-                                        />
-                                    </div>
-                                    <div class="about-title">
-                                        <img
-                                            :src="`./assets/images/main_title_ver_${item.id}.png`"
-                                            :alt="`skull-${item.color}`"
-                                        />
-                                        <img
-                                            class="sub-img"
-                                            :src="`./assets/images/sub_title_ver_${item.id}.png`"
-                                            :alt="`skull-${item.color}`"
-                                        />
+                                <a href="#" :class="item.color" :key="item.id">
+                                    <div class="content-wrap">
+                                        <div class="about-pic">
+                                            <img
+                                                :src="`./assets/images/main_skull/main_skull_${item.id}.png`"
+                                                :alt="`skull-${item.color}`"
+                                            />
+                                        </div>
+                                        <div class="about-title">
+                                            <img
+                                                :src="`./assets/images/main_title/main_title_ver_${item.id}.png`"
+                                                :alt="`skull-${item.color}`"
+                                            />
+                                            <img
+                                                class="sub-img"
+                                                :src="`./assets/images/sub_title/sub_title_ver_${item.id}.png`"
+                                                :alt="`skull-${item.color}`"
+                                            />
+                                        </div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="artists">
+                    <div class="container">
+                        <div class="block-title">
+                            <span class="title-border"
+                                ><img src="" alt=""
+                            /></span>
+                            <h2>演出卡司</h2>
+                        </div>
+                        <div class="artists-wrap">
+                            <div class="artists-card" v-for="item in artists">
+                                <a href="" :key="item.id">
+                                    <span
+                                        class="pic"
+                                        :style="{backgroundImage: `url(${item.pic})`}"
+                                    ></span>
+                                    <span class="intro">{{ item.intro }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery"></div>
             </div>
+        </div>
+        <div id="footer-app">
+            <footer class="footer"></footer>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
