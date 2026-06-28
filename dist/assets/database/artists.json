@@ -1,21 +1,25 @@
 [
     {
         "id": 1,
-        "pic": "",
-        "intro": ""
+        "link": "#",
+        "pic": "./assets/images/artists/artist_ver_1.jpg",
+        "intro": "Maná"
     },
     {
         "id": 2,
+        "link": "#",
         "pic": "",
         "intro": ""
     },
     {
         "id": 3,
+        "link": "#",
         "pic": "",
         "intro": ""
     },
     {
         "id": 4,
+        "link": "#",
         "pic": "",
         "intro": ""
     }

@@ -56,14 +56,34 @@ button.cta {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 10px;
-    border-radius: map-get($map: $radius, $key: md);
-    background-color: rgba($bg-color, 0.6);
+    border-bottom: 1px solid $primary-color;
 
     h2 {
         font-size: 2rem;
         font-weight: $bold;
         letter-spacing: 0.1rem;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-wrapper {
+        height: 100%;
+
+        .swiper-slide {
+            height: 100%;
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    background: $primary-color;
+
+    &-active {
+        background: $accent-color;
     }
 }

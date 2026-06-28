@@ -37,7 +37,7 @@ const mainOptions = {
                 minutes: "0",
                 seconds: "0",
             },
-            abouts: [],
+            aboutColors: [],
             artists: [],
         };
     },
@@ -54,10 +54,31 @@ const mainOptions = {
         setInterval(() => {
             this.countTime();
         }, 1000);
-        this.abouts = await fetchApi("./assets/database/about_color.json");
+        this.aboutColors = await fetchApi(
+            "./assets/database/about_colors.json",
+        );
         this.artists = await fetchApi("./assets/database/artists.json");
     },
 };
 
 const mainApp = createApp(mainOptions);
 mainApp.mount("#main-app");
+
+// const swiper = new Swiper(".mySwiper", {
+//     slidesPerView: 1,
+//     spaceBetween: 0,
+//     loop: true,
+//     // autoplay: {
+//     //     delay: 2500,
+//     //     disableOnInteraction: false,
+//     // },
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//         dynamicBullets: false,
+//     },
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+// });
